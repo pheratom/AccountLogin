@@ -1,4 +1,4 @@
-Local Host Account Login. Works on **Linux** only.
+Local Host Account Login. Works on both **Linux** and **Windows**.
 You need to install git and python to run script!
 ###### Debian/Ubuntu:
 `sudo apt install git python3`
