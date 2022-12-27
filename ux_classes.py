@@ -76,5 +76,10 @@ class Secure:
         except FileNotFoundError:
             import os
             print("Script will create DB. Run app again.")
-            os.system("mkdir private && cd private && touch users.conf")
-            sys.exit(0)
+            if os.name == 'nt':
+                os.system("mkdir private")
+                os.system("cd private && type nul > users.conf")
+                sys.exit(0)
+            elif os.name == "posix":
+                os.system("mkdir private && cd private && touch users.conf")
+                sys.exit(0)
